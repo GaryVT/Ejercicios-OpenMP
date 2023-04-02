@@ -1,12 +1,15 @@
 #include <iostream>
+#include <ctime> 
 
 using namespace std;
 
 int main(){
-	
+	unsigned t0, t1;
+
 	int N=1000, i, j;
 	//cin>>N;
 	bool esprimo[N];//tabla que nos indica si es primo
+	t0=clock();
 	for(i=0; i<N;i++){
 		esprimo[i]=true;
 	}
@@ -23,6 +26,8 @@ int main(){
 			cout<<i<<"  ";
 		}
 	}
+	t1 = clock();
+	double time = (double(t1-t0)/CLOCKS_PER_SEC);
+	cout << "\nTiempo de ejecucion: " << time << endl;
 	
 }
-
